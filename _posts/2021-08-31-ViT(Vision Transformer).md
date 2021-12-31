@@ -8,8 +8,6 @@ coments: false
 mathjax: true
 ---
 
-
-
 # ViT(Vision Transformer)
 
 - 제목: AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE
@@ -19,7 +17,7 @@ mathjax: true
 
 
 
-![](C:\workspace\논문\vit\image1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/vit/image1.png?raw=true)
 
 
 
@@ -47,7 +45,7 @@ mathjax: true
 
 ## Method
 
-![](C:\workspace\논문\vit\fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/vit/fig1.png?raw=true)
 
 - 연구진들은 기존 transformer의 이점을 이용하고자 최대한 original과 유사하게 설계하였음
 
@@ -84,7 +82,7 @@ mathjax: true
 - Encoder의 경우 MSA와 MLP로 구성되어 있으며 layernormalization의 경우 모든 patch에 적용됨
 - Encoder의 MLP에서는 activation으로 ReLU가 아닌 GELU(Gaussian Error Linear Unit)를 사용하는 2개의 layer가 포함되어 있음(FC-GELU-FC)
 
-> ![](C:\workspace\논문\vit\GELU.png)
+> ![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/vit/GELU.png?raw=true)
 
 ![](C:\workspace\논문\vit\s1.png)
 
@@ -111,7 +109,7 @@ mathjax: true
 - pre-train으로는 ImageNet, ImageNet-21k, JFT-300M을 사용
 - fine-tuning으로는 pre-train에 사용하고 남은 ImageNet, ImageNet ReaL, CIFAR-10/100 등을 사용
 
-![](C:\workspace\논문\vit\table1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/vit/table1.png?raw=true)
 
 ### Training & Fine-tuning
 
@@ -124,12 +122,12 @@ mathjax: true
   - optimizer: SGD
   - batch_size=512
 
-![](C:\workspace\논문\vit\table2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/vit/table2.png?raw=true)
 
 - 기존의 SOTA는 BiT-L/Noisy Student였으나 모든 dataset에 대해 ViT가 능가하는 것을 확인할 수 있으며, 비용 또한 더 작은 것을 확인 가능
 - 저자들은 본 실험을 진행하며 pre-train에서 training schedule이나 optimizer등의 다른 파라미터가 영향을 준다는 것에도 주목함
 
-![](C:\workspace\논문\vit\fig5.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/vit/fig5.png?raw=true)
 
 - training cost를 평가하는데 ViT가 성능/계산코스트에서 더 좋은 지표를 나타내었음
 - 하지만 hybrid model의 경우 계산량이 적은 부분에서는 더 뛰어남

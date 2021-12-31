@@ -8,8 +8,6 @@ coments: false
 mathjax: true
 ---
 
-
-
 # Inception v2, v3
 
 Inception-v2, v3는 GoogLeNet의 후속연구로 2016 CVPR에 *Rethinking the Inception Architecture for Computer Vision*이라는 제목으로 발표가 되었으며, 21년 3월 기준 약 1.2만회가 인용되었습니다.
@@ -74,11 +72,11 @@ Inception block에서 커다란 conv filter(5\*5 or 7\*7)를 더 작은 conv fil
 
 > 5\*5 를 3\*3 2개로 바꾸었을때 약 18%의 reduction효과가 있다.
 
-![](.\inception-v2_fig3,4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_fig3,4.png?raw=true)
 
 위와 같이 conv filter를 대체하였을 경우 표현력 손실 및 linear activation을 사용하는 것이 제안되었습니다. 저자들은 다양한 실험을 통해 rectified linear units를 사용하는 것이 항상 효과가 좋았다고 합니다.
 
-![](.\inception-v2_fig2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_fig2.png?raw=true)
 
 ### Spatial Factorization into Asymmetric Convolutions
 
@@ -88,11 +86,11 @@ n\*n conv는 1\*n, n\*1 로 이루어진 총 두개의 conv로 대체될 수 있
 
 따라서, 3\*3 filter를 Asymmetric한 filter 3\*1 과 1\*3 두개로 한번 더 분해합니다.
 
-![](.\inception-v2_fig3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_fig3.png?raw=true)
 
 논문에서는 특히 feature map의 size가 12~20인 구간에서 이 방식의 효과가 좋았다고 하고 있습니다. 따라서 실제 사이즈가 17인 구간에서 inception v2는 아래와 같은 방식을 사용하였습니다.
 
-![](.\inception-v2_fig6,7.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_fig6,7.png?raw=true)
 
 ## Utility of Auxiliary Classifiers
 
@@ -104,7 +102,7 @@ n\*n conv는 1\*n, n\*1 로 이루어진 총 두개의 conv로 대체될 수 있
 
 ## Efficient Grid Size Reduction
 
-![](.\inception-v2_fig9.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_fig9.png?raw=true)
 
 왼쪽의 방법은 먼저 pooling을 통해 이미지를 줄이고 inception을 통과하는 방법이고, 오른쪽은 inception을 통과 후 pooling을 통해 이미지를 줄이는 방법입니다.
 
@@ -112,7 +110,7 @@ n\*n conv는 1\*n, n\*1 로 이루어진 총 두개의 conv로 대체될 수 있
 
 따라서 저자들은 연산량도 줄이고, Representational bottleneck을 피하기 위한 아래와 같은 방법을 제안하였습니다.
 
-![](.\inception-v2_fig10.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_fig10.png?raw=true)
 
 inception block안에서 stride 2를 사용하여 이미지 사이즈를 줄이면서 연산량을 줄이는 방법을 사용하였습니다.
 
@@ -124,7 +122,7 @@ GoogLeNet에서는 inception block의 input과 output의 사이즈가 같았지�
 
 위의 아이디어가 적용되어 최종적으로는 다음과 같은 구조의 inception-v2가 탄생하게 되었습니다.
 
-![](.\inception-v2_table1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_table1.png?raw=true)
 
 처음부터 conv layer가 3개가 있는데 이것은 원래 GoogLeNet에서 7\*7 filter를 Factorization을 적용했기 때문입니다.
 
@@ -160,7 +158,7 @@ s이렇게 해주면, 데이터셋이 mislabeling된 경우를 잘 넘어갈 수
 
 그래서 이렇게 스무딩된 소프트 라벨을 cross-entropy를 통해 기존 라벨을 대체해 사용하게 됩니다.
 
-![](.\inception-v2_cross.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_cross.png?raw=true)
 
 위의 식과 같이 $y_k$대신 $y^{LS}_k$를 사용해서 cross-entropy loss를 최소화 하여 라벨 스무딩 효과를 적용할 수 있습니다.
 
@@ -168,7 +166,7 @@ s이렇게 해주면, 데이터셋이 mislabeling된 경우를 잘 넘어갈 수
 
 본 논문에서는 label smoothing regularization을 cross-entropy에 적용한 식을 다음과 같이 사용하였습니다.
 
-![](.\inception-v2_cross_soft_label.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_cross_soft_label.png?raw=true)
 
 - K: 전체 label 수
 - u: label의 분포
@@ -204,7 +202,7 @@ s이렇게 해주면, 데이터셋이 mislabeling된 경우를 잘 넘어갈 수
 
 그 결과 아래와 같은 Top-1 Accuracy가 나타났습니다.
 
-![](.\inception-v2_table2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_table2.png?raw=true)
 
 결과를 보면 세개의 해상도 모두 비슷한 정확도를 나타내는 것을 확인할 수 있었습니다.
 
@@ -214,7 +212,7 @@ s이렇게 해주면, 데이터셋이 mislabeling된 경우를 잘 넘어갈 수
 
 위에서 설명한 기법들은 하나하나 섞어가며 실험을 진행하였습니다.
 
-![](.\inception-v2_table3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/inception%20v2/inception-v2_table3.png?raw=true)
 
 table3을 보면 많은 기법들을 섞어서 비교하였는데요
 

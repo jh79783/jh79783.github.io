@@ -8,8 +8,6 @@ coments: false
 mathjax: true
 ---
 
-
-
 # EfficientDet
 
 - 제목: EfficientDet: Scalable and Efficient Object Detection
@@ -45,7 +43,7 @@ mathjax: true
 
 ## Cross-Scale Connections
 
-![](.\EfficientDet_Fig2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_Fig2.png?raw=true)
 
 - (a): 전통적인 FPN의 구조
   - 하향식 구조로 정보가 단방향으로 흐르기 때문에 제한적임
@@ -59,7 +57,7 @@ mathjax: true
   - 보라색 선과 같이 같은 scale에서 입력을 추가하여 적은 cost로 더 많은 feature가 fusion되도록 함
   - 이를 여러번 반복하여 사용
 
-![](.\EfficientDet_table4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_table4.png?raw=true)
 
 ## Weighted Feature Fusion
 
@@ -68,7 +66,7 @@ mathjax: true
 
 ### Unbounded fusion
 
-![](.\EfficientDet_unbounded.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_unbounded.png?raw=true)
 
 > I: feature map
 >
@@ -80,14 +78,14 @@ mathjax: true
 
 ### Softmax-based fusion
 
-![](.\EfficientDet_softmax.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_softmax.png?raw=true)
 
 - 0~1사이의 범위로 변환하여 sum하는 방식
 - GPU에서 연산시 속도가 많이 떨어지는것을 확인
 
 ### Fast normalizaed fusion
 
-![](.\EfficientDet_fast.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_fast.png?raw=true)
 
 - 본 논문에서 채택한 fusion method
 - $w_i$가 양수이여야 하기 때문에 Relu를 통과한 값을 사용
@@ -98,7 +96,7 @@ mathjax: true
 
 ### EfficientDet Architecture
 
-![](./EfficientDet_fig3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_Fig3.png?raw=true)
 
 - Backbone: EfficientNet-B0 ~ B6
 
@@ -110,7 +108,7 @@ mathjax: true
 
 ### Compound Scaling
 
-![](.\EfficientDet_compound.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_compound.png?raw=true)
 
 - width scaling
   - filter의 수를 늘려 scale-up하는 방법
@@ -126,7 +124,7 @@ mathjax: true
   - EfficientNet에서 제안하는 방법
   - width + depth + resolution을 적절히 조절해 정확도를 높이는 방법
 
-![](.\EfficientDet_compound_scale.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_compound_scale.png?raw=true)
 
 - 모든 scaling에 대한 값을 추정하기 어려워 heuristic-based scaling approach사용
 
@@ -153,12 +151,12 @@ mathjax: true
   - $W_{pred}=W_{bifpn}$
   - $D_{box}=D_{class}=3+[\phi/3]$
 
-![](.\EfficientDet_table1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_table1.png?raw=true)
 
 > $\phi$에 따른 각각의 정보
 
 # Experiments
 
-![](.\EfficientDet_fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_fig1.png?raw=true)
 
-![](.\EfficientDet_fig4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/efficientdet/EfficientDet_fig4.png?raw=true)

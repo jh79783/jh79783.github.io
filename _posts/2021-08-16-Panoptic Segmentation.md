@@ -29,7 +29,7 @@ mathjax: true
   >
   > Things: Instance Segmentation으로 다룰 수 있으며, 셀 수 있는 영역
 
-![](C:\workspace\논문\panoptic segmentation\fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/fig1.png?raw=true)
 
 - 기존의 metric은 stuff와 things를 동시에 고려하지 않았기 때문에 이를 평가할 Panoptic Quality(PQ)라는 새로운 metric을 제시함
 
@@ -86,23 +86,23 @@ mathjax: true
 
   > TP, FP, FN
 
-  ![](C:\workspace\논문\panoptic segmentation\fig2.png)
+  ![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/fig2.png?raw=true)
 
   
 
 - PQ는 다음과 같이 계산됨
 
-![](C:\workspace\논문\panoptic segmentation\s1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/s1.png?raw=true)
 
 - 분모의 FP와 FN을 제외하고 보면 다음과 같이 볼 수 있음
 
-![](C:\workspace\논문\panoptic segmentation\s2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/s2.png?raw=true)
 
 - 이 부분은 단순히 TP로 매칭된 segment의 평균 IoU를 나타냄
 - 나머지 FP와 FN이 포함된 부분은 매칭이 되지않은 segment에 대해 패널티를 주는 역할을 함
 - 또한 PQ는 segmentation quality(SQ) + recognition quality(RQ)로 표현이 될 수 있음
 
-![](C:\workspace\논문\panoptic segmentation\s3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/s3.png?raw=true)
 
 - RQ의 경우 F1 score의 형태임
 
@@ -132,12 +132,12 @@ mathjax: true
 
 ## Result
 
-![](C:\workspace\논문\panoptic segmentation\fig9.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/fig9.png?raw=true)
 
 
 
-![](C:\workspace\논문\panoptic segmentation\table3,4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/table3,4.png?raw=true)
 
-![](C:\workspace\논문\panoptic segmentation\table5.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/table5.png?raw=true)
 
-![](C:\workspace\논문\panoptic segmentation\table6.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/panoptic%20segmentation/table6.png?raw=true)

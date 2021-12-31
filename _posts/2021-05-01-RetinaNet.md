@@ -36,16 +36,16 @@ mathjax: true
 
 - 일반적인 cross entropy의 공식은 다음과 같음
 
-![](.\retinanet_s1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_s1.png?raw=true)
 
-![](.\retinanet_s2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_s2.png?raw=true)
 
 ## Balanced Cross Entropy
 
 - cross entropy의 imbalance문제를 해결하기 위해 $\alpha$를 곱함
   - $\alpha$는 0~1사이의 값을 갖고있는 가중치 파라미터
 
-![](.\retinanet_s3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_s3.png?raw=true)
 
 - positive/negative sample사이의 균형은 잡아주지만 easy/hard sample에 대해서는 잡아주지 못함
 
@@ -55,11 +55,11 @@ mathjax: true
 - Focal Loss는 easy example의 중요도를 낮추어 hard negative에 집중하게 만들어 줌
 - Focal Loss는 cross entropy에 modulating factor인 $(1-p_t)^\gamma$와 tunable focusing paramter인 $\gamma$를 추가한 형태
 
-![](.\retinanet_s4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_s4.png?raw=true)
 
 - $\gamma$값의 에 따른 loss는 다음과 같음
 
-![](.\retinanet_fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_fig1.png?raw=true)
 
 - pt와 modulating foctor의 관계
 
@@ -97,11 +97,11 @@ mathjax: true
 
   - softmax 이후의 값을 0.01로 고정 시키면 해결
 
-  ![](.\retinanet_initialization.png)
+  ![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_initialization.png?raw=true)
 
   - bias는 다음과 같이 초기화
 
-  ![](.\retinanet_bias_init.png)
+  ![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_bias_init.png?raw=true)
 
   - 즉, bias를 위의 공식으로 초기화하고, weight는 (0, 0.01)에서 sampling하여 초기화
 
@@ -113,7 +113,7 @@ mathjax: true
 
 - backbone network와 2개의 subnetwork로 구성
 
-![](.\retinanet_fig3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_fig3.png?raw=true)
 
 ## Feature Pyramid Network Backbon
 
@@ -178,14 +178,14 @@ mathjax: true
 - $\gamma$를 키울수록 $\alpha$를 감소시켜야함
 - $\gamma=2, \alpha=0.25$일때가 가장 성능이 좋았음
 
-![](.\retinanet_figb.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_figb.png?raw=true)
 
 ## Experiments
 
 - COCO dataset으로 평가
 
-![](.\retinanet_fig2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_fig2.png?raw=true)
 
 - 다른 sota detector와 비교한 결과
 
-![](.\retinanet_table2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/retinanet/retinanet_table2.png?raw=true)

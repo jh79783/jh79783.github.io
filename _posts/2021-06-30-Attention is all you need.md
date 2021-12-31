@@ -38,7 +38,7 @@ mathjax: true
 - 모든 step은 auto-regressive이고, 다음 단계의 symbol을 생성할때 이전단계에서 생성된 symbol을 추가 입력
 - Transformer는 encoder와 decoder에 self-attention과 point-wise, FC layer를 쌓아서 사용한 구조
 
-![](.\attention_fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_fig1.png?raw=true)
 
 ### Encoder and Decoder Stacks
 
@@ -95,9 +95,9 @@ mathjax: true
 
 - 실제로는 여러 query와 그에따른 key, value를 matrix로 묶어 Q, K, V로 만들어 계산한다.
 
-![](.\attention_s1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_s1.png?raw=true)
 
-![](.\attention_fig2_1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_fig2_1.png?raw=true)
 
 #### Multi-Head Attention
 
@@ -107,7 +107,7 @@ mathjax: true
 
 - 이들을 병렬처리하여 $d_v$차원의 output(attention)을 concatenate 한 후, 최종 output을 도출
 
-![](.\attention_s2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_s2.png?raw=true)
 
 - 본 논문에서는 h=8의 값을 사용
 - $d_k,d_v=d_{model}/h=64$를 사용(512/8)
@@ -140,7 +140,7 @@ mathjax: true
 
 - 이는 두번의 linear transformation과 ReLU를 포함
 
-![](.\attention_s3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_s3.png?raw=true)
 
 - input과 output은 동일하게 $d_{model}=512$, FFN내부의 hidden layer$(W_1\space등)$는 2048차원
 
@@ -161,7 +161,7 @@ mathjax: true
 - potitional encoding은 $d_{model}$ 차원과 동일하기 때문에 합치기 가능
 - 본 논문에서는 sin/cos 함수를 사용
 
-![](.\attention_s4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_s4.png?raw=true)
 
 > pos: 위치
 >
@@ -175,7 +175,7 @@ mathjax: true
 - 동시에 병렬로 계산이 가능
 - 멀리 떨어진 원소들간의 path length감소
 
-![](.\attention_table1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_table1.png?raw=true)
 
 - table을 살펴보면 self-attention이 상수배로 작은 것을 확인 가능
 
@@ -196,10 +196,10 @@ mathjax: true
 - learning_rate: 1 워밍업 단계에선 선형적으로 증가, 그 후 스텝 수의 역 제곱근에 비례하여 감소
   - warmup_steps = 4,000
 
-![](.\attention_s5.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_s5.png?raw=true)
 
 - Residual Dropout: $P{drop}=0.1$
 
 ## Result
 
-![](.\attention_table2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/attention/attention_table2.png?raw=true)

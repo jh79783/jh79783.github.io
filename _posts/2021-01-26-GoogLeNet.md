@@ -8,8 +8,6 @@ coments: false
 mathjax: true
 ---
 
-
-
 # GoogLeNet
 
 이 논문은 CVPR2015에 공개 되었으며, 제목은 Going deeper with convolutions입니다. 
@@ -63,7 +61,7 @@ neural network의 성능을 향상시키는데 가장 직접적인 방법은 dep
 
 LeNet에서도 convolution안에서 sparse하게 사용하였습니다.
 
-![](..\lenet\LeNet-5_table1.jpg)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/lenet/LeNet-5_table1.jpg?raw=true)
 
 하지만 오늘날의 컴퓨터의 구조는 non-uniform sparse한 data구조를 계산하기엔 너무 비효율적이기 때문에 sparse한 matrix를 densely한 submatrix로 clustering하는 방법을 제안하였으며, 저자들은 이 방법이 non-uniform한 deeplearning 아키텍처의 자동화 기법에 비슷한 방법이 멀지않은 미래에 활용될 수 있을것이라 생각하였습니다.
 
@@ -89,7 +87,7 @@ patch alignment issues(패치 정렬 문제)를 피하기위해 Inception구조�
 
 
 
-<img src="./googlenet_module.png" style="zoom:75%;" />
+<img src="https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/googlenet/googlenet_module.png?raw=true" style="zoom:75%;" />
 
 이런 Inception module은 서로의 위에 쌓이게 되는데, 이것은 출력되는 correlation statistics가 달라질 수 있습니다. 즉, high layer에서 더 추상적인 특징들이 추출되기 때문에 공간적인 집중도가 감소할 것으로 예상이 된다고 합니다. 이는 high layer로 갈수록 3\*3, 5\*5와 같은 비율이  증가하는 것을 의미합니다.
 
@@ -121,7 +119,7 @@ ILSVRC 2014에 GoogLeNet이라는 팀으로 출전하였으며, Inception구조�
 
 가장 성공적인 모델을 table에 적었으며, 추가적으로 구성한 모델은 6개가 더있습니다. 따라서 총 7개의 모델이 존재합니다.
 
-![](./googlenet_table1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/googlenet/googlenet_table1.png?raw=true)
 
 > 3\*3 reduce, 5\*5 reduce는 3\*3, 5\*5크기의 convolution을 적용하기 전, reduction하는 1\*1filter 수를 의미한다고 합니다.
 >
@@ -159,7 +157,7 @@ Inception 모듈 내부에서 모든 convolution에서 ReLU를 사용합니다.
 - dropout = 0.7
 - linear layer(FC layer)에 softmax를 사용한 1000-class classifier
 
-![](.\googlenet_.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/googlenet/googlenet_.png?raw=true)
 
 ## Training Methodology
 
@@ -181,7 +179,7 @@ classfication challenge는 이미지를 ImageNet의 1000개의 카테고리 중 
 
 GoogLeNet은 추가적인 데이터를 학습에 사용하지 않았으며, 테스트 과정에서는 side를 256/288/320/352 4가지 scale로 크기를 조정한 후 왼쪽, 가운데, 오른쪽을 잘라줍니다. 이때 자른 이미지에 대해서 모서리와 중앙에 224\*224크기로 crop하고, 자른 이미지를 224\*224로 resize한 것과 미러링된 버전을 취해주는 crop방식을 사용하였다고 합니다. 이는 AlexNet보다 더 적극적인 crop방식이라고 소개하고 있습니다.
 
-![](.\googlenet_classification_result.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/googlenet/googlenet_classification_result.png?raw=true)
 
 위의 테이블을 살펴보면 GoogLeNet은 top-5 error를 6.67%로 1위를 차지하였습니다.
 
@@ -193,7 +191,7 @@ GoogLeNet이 검출을 위해 사용한 접근법은 R-CNN과 비슷하지만 re
 
 region에 대한 classification에는 6개의 GoogLeNet을 앙상블하여 정확도가 40%에서 43.9%로 향상된 결과를 나타내었습니다.
 
-![](.\googlenet_detection_result.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/googlenet/googlenet_detection_result.png?raw=true)
 
 위의 table을 detection 결과를 나타냅니다.
 

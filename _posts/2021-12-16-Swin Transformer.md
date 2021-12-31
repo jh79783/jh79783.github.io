@@ -26,14 +26,14 @@ mathjax: true
 
 - 이를 해결하기 위해 Shifted Window기법을 사용한 Swin Transformer를 제안함
 
-![](C:\workspace\논문\swin_transformer\fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/fig1.png?raw=true)
 
 - image 안에 local window가 존재
 - local window안에서 self attention을 수행하며 layer를 통과할 수록 인접한 patch부분을 합쳐 계층적으로 표현할 수 있게 됨
 
 - local window 경계에 있는 patch는 self attention을 수행하지 않기 때문에 window 크기의 절반만큼 shift시킨 후 같은 계산을 반복해서 수행함
 
-![](C:\workspace\논문\swin_transformer\fig2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/fig2.png?raw=true)
 
 - shifted window방식을 사용하여 image classification, object detection, semantic segmentation에서 ViT, DeiT, RexNe(X)t를 능가함
 
@@ -43,7 +43,7 @@ mathjax: true
 
 - 전체적인 architecture (Tiny 모델)
 
-![](C:\workspace\논문\swin_transformer\fig3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/fig3.png?raw=true)
 
 - input ~ patch partition
   - input으로 image를 받는데, patch partition에서 이미지를 patch로 나누게 됨
@@ -86,7 +86,7 @@ mathjax: true
 - 인접한 patch들끼리 attention을 할 수 없는 문제가 있음
 - 이를 위해 Window를 M/2만큼 Cyclic shift한 다음 같은 계산을 수행
 
-![](C:\workspace\논문\swin_transformer\fig4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/fig4.png?raw=true)
 
 - 원래는 4\*4크기의 window를 갖고있는데, window 끼리 attention을 적용시키기 위해 window를 shift하니 window의 크기가 매우 다양해짐
 
@@ -103,7 +103,7 @@ mathjax: true
 - VIT와 다르게 처음에 더해주는 position embedding이 없음
 - 대신 attention과정에서 relative position bias(B)를 추가해 주었음
 
-![](C:\workspace\논문\swin_transformer\s4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/s4.png?raw=true)
 
 - VIT에서는 절대 좌표를 넣어주었음
 
@@ -133,7 +133,7 @@ mathjax: true
 
 #### Classification
 
-![](C:\workspace\논문\swin_transformer\table1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/table1.png?raw=true)
 
 - (a): ImageNet-1K만을 학습시킨 결과
 - (b): ImageNet-22K로 사전학습 후 ImageNet-1K로 미세조정한 결과
@@ -145,7 +145,7 @@ mathjax: true
 
 ### Object Detection
 
-![](C:\workspace\논문\swin_transformer\table2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/table2.png?raw=true)
 
 setting
 
@@ -156,12 +156,12 @@ setting
 
 ### Semantic Segmentation
 
-![](C:\workspace\논문\swin_transformer\table3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/table3.png?raw=true)
 
 ## Ablation study
 
-![](C:\workspace\논문\swin_transformer\table4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/table4.png?raw=true)
 
 ## 속도 비교
 
-![](C:\workspace\논문\swin_transformer\table5.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/swin_transformer/table5.png?raw=true)

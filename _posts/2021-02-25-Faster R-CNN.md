@@ -38,7 +38,7 @@ VGG-16 모델을 GPU를 통해 실험하였을때, 5fps를 가졌으며, PASCAL 
 
 저자들은 Fast R-CNN에서 feature map이 RP로 사용될 뿐만 아니라 RP를 생성하는 것을 확인하였기 때문에 feature map이 만들어졌을 때, RPN을 feature map으로 쌓고 정형화된 grid로 나누면 bbox와 classifier를 동시에 할 수 있을 것이라고 보았습니다.
 
-![](.\faster rcnn_fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_fig1.png?raw=true)
 
 일반적으로 (a)나 (b)와 같은 방법으로 aspect ratio에서 RP를 예측하였습니다.
 
@@ -55,7 +55,7 @@ Faster R-CNN은 2개의 모듈로 구성되어 있습니다.
 1. PR을 만드는 deep fully convolutional network
 2. PR을 사용하기 위한 Fast R-CNN detector
 
-![](.\faster rcnn_fig2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_fig2.png?raw=true)
 
 ### Region Proposal Networks
 
@@ -106,7 +106,7 @@ Multi Box method는 k-means를 사용해 800개의 anchor를 생성하지만 이
 
 ### Multi-Scale Anchors as Regression References
 
-![](.\faster rcnn_fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_fig1.png?raw=true)
 
 사진처럼 multi-scale 예측을 위한 두 가지 방법이 있습니다.
 
@@ -142,7 +142,7 @@ Negative
 
 이 방법으로 Fast R-CNN의 multi-task loss를 따르게 됩니다.
 
-> ![](.\faster rcnn_s1.png)
+> ![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_s1.png?raw=true)
 >
 > i: batch 당 앵커의 index
 >
@@ -160,7 +160,7 @@ Negative
 >
 > Lreg: smooth L1 방식을 사용해 bbox regression 적용
 >
-> ![](.\faster rcnn_s2.png)
+> ![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_s2.png?raw=true)
 >
 > x, y: 중심좌표
 >
@@ -210,7 +210,7 @@ RPN + Fast R-CNN을 사용하여 300개의 proposal이 생성되었고, 이를 �
 
 
 
-![](.\faster rcnn_table1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_table1.png?raw=true)
 
 RPN과 Fast R-CNN 사이에서 convolutional layer를 공유했을때의 효과를 보여줍니다.
 
@@ -218,13 +218,13 @@ RPN+ZF의 경우가 mAP가 가장 높았습니다.
 
 또한 proposal이 6000인 경우 mAP는 55.2%로 NMS가 mAP에 악영향을 미치지 않는 것을 알 수 있었다고 합니다.
 
-![](.\faster rcnn_table2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_table2.png?raw=true)
 
 이번에는 RPN+VGG를 사용한 결과입니다.
 
 ZF보다 VGG를 사용하였을때 생성된 proposal이 더 정확한 것을 확인할 수 있었습니다.
 
-![](.\faster rcnn_table3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_table3.png?raw=true)
 
 시간을 비교한 table입니다.
 
@@ -232,11 +232,11 @@ VGG는 최종적으로 198ms가 소요되었으며 ZF는 59ms가 소요되었습
 
 또한 VGG에 convolutional feature가 공유되었을 경우에는 layer를 계산하는데 10ms가 걸린다고 하였습니다.
 
-![](.\faster rcnn_table4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_table4.png?raw=true)
 
 scale과 ratio의 갯수를 다르게하여 적용한 결과입니다. 최종적으로는 3scale, 3ratio를 사용한 것이 mAP가 가장 높았습니다.
 
-![](.\faster rcnn_table5.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/faster%20rcnn/faster%20rcnn_table5.png?raw=true)
 
 대규모의 데이터가 어떤 영향을 미치는지에 대한 결과입니다.
 

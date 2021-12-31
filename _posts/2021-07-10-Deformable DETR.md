@@ -35,7 +35,7 @@ mathjax: true
 
 - 본 논문에서는 이 문제들을 Deformable Convolution와 attention을 결합한 Deformable attention moduel을 제안하여 해결하고자 함
 
-![](.\deformabledetr_fig1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformabledetr_fig1.png?raw=true)
 
 ## Deformable Convolution
 
@@ -43,17 +43,17 @@ mathjax: true
 - convolution의 필터모양을 다양한 형태로 변형시키도록 offset을 추가로 학습 시킨 후 이를 갖고 convolution을 진행
 - object scale에 따라 receptive field가 달라지게됨
 
-![](.\deformableconv_fig2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformableconv_fig2.png?raw=true)
 
-![](.\deformableconv_fig5.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformableconv_fig5.png?raw=true)
 
 ## Deformable Attention Module
 
-![](.\deformabledetr_fig2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformabledetr_fig2.png?raw=true)
 
 - 기존의 attention module은 입력된 모든 feature map에 대해 수행함
 
-![](.\deformabledetr_s1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformabledetr_s1.png?raw=true)
 
 > $z_q$=input feature of $q^{th}$ query
 >
@@ -67,7 +67,7 @@ mathjax: true
 
 -  deformable attention module은 deformable convolution을 도입한 attention으로 feature map에서 k개 만큼 sampling을 하여 attention을 수행함
 
-![](.\deformabledetr_s2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformabledetr_s2.png?raw=true)
 
 > $z_q$=input feature of $q^{th}$ query
 >
@@ -83,9 +83,9 @@ mathjax: true
 
 - 이를 multi scale에 대해 적용하기 위해 level을 추가한 형태의 attention module을 사용
 
-![](.\deformabledetr_s3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformabledetr_s3.png?raw=true)
 
-![](.\deformableconv_fig4.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformableconv_fig4.png?raw=true)
 
 - resnet의 C3~C5를 input으로 사용
 
@@ -110,15 +110,15 @@ mathjax: true
 - K = 4
 - N = 100~300
 
-![](.\deformabledetr_table1.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformabledetr_table1.png?raw=true)
 
-![](.\deformabledetr_fig3.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformabledetr_fig3.png?raw=true)
 
 - Deformable DETR은 기존의 DETR보다 훨씬 더 적은 epoch을 사용하여 동일한 성능을 내었음
 - small object에 대해서 더 높은 성능을 나타냄
 - 더 적은 parameter인데도 불구하고 FPS가 낮게 되었는데, 이 이유로 저자들은 Deformable DETR이 memory에 랜덤하게 액세스가 되기 때문에 최적화 문제라고 언급하였음
 
-![](.\deformabledetr_table2.png)
+![](https://github.com/jh79783/jh79783.github.io/blob/main/assets/img/deformable/deformabledetr_table2.png?raw=true)
 
 - FPN을 사용하여도 효과를 보기는 어려웠음
 
